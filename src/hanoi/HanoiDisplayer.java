@@ -20,9 +20,6 @@ public class HanoiDisplayer {
      * @param h hanoi faisant la résolution
      */
     public void display(Hanoi h){
-        System.out.println("\nTurn " + h.turn());
-        for(Stack s : h.getStakes()){
-            System.out.println(s);
-        }
+        System.out.println(h);
     }
 }

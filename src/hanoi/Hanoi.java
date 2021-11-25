@@ -15,6 +15,7 @@ public class Hanoi {
     int counter;
     HanoiDisplayer display;
     Boolean finished;
+    String[] numbers = {"one", "two", "three"};
 
     /**
      * Constructeur utilisé pour le mode console
@@ -71,10 +72,23 @@ public class Hanoi {
     }
 
     /**
-     * permet de récupérer l'état des tours
-     * @return tableau des 3 tours
+     * permet de récupérer l'état des tours sous le format suivant
+     * -- Tour n:
+     * one: [valeurs]
+     * two: [valeurs]
+     * three: [valeurs]
+     * @return string contenant les valeurs des 3 tours
      */
-    public Stack[] getStakes(){return stakes;}
+    public String toString(){
+        StringBuilder toReturn = new StringBuilder();
+        toReturn.append("\n-- Turn ").append(turn()).append("\n");
+
+        for(int i = 0; i < NB_STAKE; ++i){
+            toReturn.append(numbers[i]).append(": ").append(stakes[i]).append("\n");
+        }
+
+        return toReturn.toString();
+    }
 
     /**
      * permet de récupérer le contenu des tours en int
