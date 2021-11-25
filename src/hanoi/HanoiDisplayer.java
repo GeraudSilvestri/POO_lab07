@@ -9,12 +9,6 @@ import util.Stack;
  * @author Loïc Rosset
  */
 public class HanoiDisplayer {
-
-    /**
-     * constructeur par défaut
-     */
-    public HanoiDisplayer(){}
-
     /**
      * gère l'affichage des tours
      * @param h hanoi faisant la résolution

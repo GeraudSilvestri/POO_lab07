@@ -1,7 +1,7 @@
 package util;
 
 /**
- * Itérateur pour la pile
+ * Itérateur pour la pile mettant à disposition des méthodes sur ladite pile
  *
  * @author Géraud Silvestri
  * @author Loïc Rosset
