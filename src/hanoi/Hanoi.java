@@ -11,7 +11,7 @@ public class Hanoi {
     Boolean finished;
 
     public Hanoi(int nbDisks){
-        this(nbDisks, new HanoiDisplayer(0));
+        this(nbDisks, new HanoiDisplayer());
     }
 
     public Hanoi(int nbDisks, HanoiDisplayer display){

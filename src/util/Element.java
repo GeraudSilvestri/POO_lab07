@@ -1,12 +1,8 @@
 package util;
 
 public class Element {
-    private Object value;
-    private Element next;
-
-    public void setNext(Element next) {
-        this.next = next;
-    }
+    private final Object value;
+    private final Element next;
 
     @Override
     public String toString() {
@@ -15,10 +11,6 @@ public class Element {
 
     public Element getNext() {
         return next;
-    }
-
-    public Element(Object o){
-        value = o;
     }
 
     public Element(Object o, Element next){
