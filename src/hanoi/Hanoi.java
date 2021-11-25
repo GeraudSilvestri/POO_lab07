@@ -2,6 +2,12 @@ package hanoi;
 
 import util.Stack;
 
+/**
+ * Mets à disposition la logique derrière la résolution des tours de Hanoi
+ *
+ * @author Géraud Silvestri
+ * @author Loïc Rosset
+ */
 public class Hanoi {
     private static final int NB_STAKE = 3;
     int nbDisks;
@@ -10,10 +16,19 @@ public class Hanoi {
     HanoiDisplayer display;
     Boolean finished;
 
+    /**
+     * Constructeur utilisé pour le mode console
+     * @param nbDisks nombre de disques
+     */
     public Hanoi(int nbDisks){
         this(nbDisks, new HanoiDisplayer());
     }
 
+    /**
+     * Constructeur utilisé pour le mode GUI
+     * @param nbDisks nombre de disques
+     * @param display méthode de display des tours
+     */
     public Hanoi(int nbDisks, HanoiDisplayer display){
         this.nbDisks = nbDisks;
         this.display = display;
@@ -28,6 +43,9 @@ public class Hanoi {
         }
     }
 
+    /**
+     * lance la résolution des tours
+     */
     public void solve(){
         finished = false;
         display.display(this);
@@ -35,6 +53,13 @@ public class Hanoi {
         finished = true;
     }
 
+    /**
+     * résout la tour
+     * @param n numéro du disque a traiter
+     * @param from tour de départ
+     * @param middle tour intermédiaire
+     * @param dest tour finale
+     */
     private void solve(int n, Stack from, Stack middle, Stack dest){
         if(n > 0) {
             solve(n - 1, from, dest, middle);
@@ -45,8 +70,16 @@ public class Hanoi {
         }
     }
 
+    /**
+     * permet de récupérer l'état des tours
+     * @return tableau des 3 tours
+     */
     public Stack[] getStakes(){return stakes;}
 
+    /**
+     * permet de récupérer le contenu des tours en int
+     * @return tableau du contenu
+     */
     public int[][] status(){
         int[][] toReturn = new int[NB_STAKE][];
 
@@ -60,9 +93,17 @@ public class Hanoi {
         return toReturn;
     }
 
+    /**
+     * permet de récupérer l'état de la résolution
+     * @return état de résolution
+     */
     public boolean finished(){
         return finished;
     }
 
+    /**
+     * permet de récupérer le nombre de déplacements effectués au moment de l'appel
+     * @return nombre de déplacements
+     */
     public int turn(){return counter;}
 }

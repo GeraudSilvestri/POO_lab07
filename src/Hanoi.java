@@ -1,5 +1,12 @@
 import hanoi.gui.JHanoi;
 
+/**
+ * Gère le programme Hanoi
+ * Lance le programme en mode GUI s'il n'y a pas de paramètres, en mode console sinon
+ *
+ *  @author Géraud Silvestri
+ *  @author Loïc Rosset
+ */
 public class Hanoi {
     public static void main(String[] args){
 
@@ -7,7 +14,7 @@ public class Hanoi {
             System.out.println("Error :  passage de paramètres");
         }
         else if(args.length == 1){
-            int temp = 0;
+            int temp;
             try {
                 temp = Integer.parseInt(args[0]);
                 hanoi.Hanoi hanoi = new hanoi.Hanoi(temp);
