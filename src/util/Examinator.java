@@ -31,7 +31,7 @@ public class Examinator {
      */
     public Object next(){
         if(!hasNext()){
-            throw new RuntimeException();
+            throw new RuntimeException("Pas d'objet suivant");
         }
 
         Object temp = current.value();

@@ -31,6 +31,8 @@ public class Stack {
      * @return valeur de l'élément au sommet
      */
     public Object pop(){
+        if(start == null)
+            throw new RuntimeException("Erreur pop");
         Element temp = start;
         start = start.getNext();
         size--;

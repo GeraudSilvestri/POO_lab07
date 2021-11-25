@@ -1,7 +1,5 @@
 package hanoi;
 
-import util.Stack;
-
 /**
  * gère le display d'hanoi (GUI ou console)
  *

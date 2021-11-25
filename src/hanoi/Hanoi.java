@@ -31,6 +31,14 @@ public class Hanoi {
      * @param display méthode de display des tours
      */
     public Hanoi(int nbDisks, HanoiDisplayer display){
+        if(nbDisks < 0){
+            System.out.println("Error : Le nombre de disques ne peut pas être négatif");
+            return;
+        }
+        if(display == null){
+            System.out.println("Error : Le displayer ne peut pas être null");
+            return;
+        }
         this.nbDisks = nbDisks;
         this.display = display;
         stakes = new Stack[NB_STAKE];
