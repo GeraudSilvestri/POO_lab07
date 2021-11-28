@@ -91,7 +91,7 @@ public class Hanoi {
             System.out.println("Attendu (hasNext): false");
             System.out.println("Recu: " + vide.getIterator().hasNext() + "\n");
             try {
-                System.out.println("Recu: " + stack.getIterator().next() + "\n");
+                System.out.println("Recu: " + vide.getIterator().next() + "\n");
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }

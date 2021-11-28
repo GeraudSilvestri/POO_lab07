@@ -56,7 +56,7 @@ public class Stack {
 
         Examinator ite = getIterator();
 
-        string.append("[");
+        string.append("[ ");
         while(ite.hasNext()){
             string.append("<").append(ite.next()).append("> ");
         }
