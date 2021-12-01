@@ -7,7 +7,7 @@ package util;
  * @author Géraud Silvestri
  * @author Loïc Rosset
  */
-public class Element {
+class Element {
     private final Object value;
     private final Element next;
 
@@ -33,7 +33,7 @@ public class Element {
      * @param o valeur de l'élément
      * @param next élément suivant (pointé)
      */
-    public Element(Object o, Element next){
+    Element(Object o, Element next){
         this.value = o;
         this.next = next;
     }

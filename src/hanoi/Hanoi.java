@@ -10,12 +10,12 @@ import util.Stack;
  */
 public class Hanoi {
     private static final int NB_STAKE = 3;
-    int nbDisks;
-    Stack[] stakes;
-    int counter;
-    HanoiDisplayer display;
-    Boolean finished;
-    String[] numbers = {"one", "two", "three"};
+    private int nbDisks;
+    private Stack[] stakes;
+    private int counter;
+    private HanoiDisplayer display;
+    private Boolean finished;
+    private String[] numbers = {"one", "two", "three"};
 
     /**
      * Constructeur utilisé pour le mode console

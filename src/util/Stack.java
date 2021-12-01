@@ -7,8 +7,8 @@ package util;
  * @author Loïc Rosset
  */
 public class Stack {
-    Element start;
-    int size;
+    private Element start;
+    private int size;
 
     /**
      * constructeur par défaut

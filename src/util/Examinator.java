@@ -7,13 +7,13 @@ package util;
  * @author Loïc Rosset
  */
 public class Examinator {
-    Element current;
+    private Element current;
 
     /**
      * constructeur contenant un élément
      * @param e élément
      */
-    public Examinator(Element e){
+    Examinator(Element e){
        current = e;
     }
 
