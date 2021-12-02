@@ -24,7 +24,7 @@ class Element {
      * permet de récupérer l'élément pointé par notre objet
      * @return élément suivant
      */
-    public Element getNext() {
+    Element getNext() {
         return next;
     }
 
@@ -38,5 +38,5 @@ class Element {
         this.next = next;
     }
 
-    public Object value(){return value;}
+    Object value(){return value;}
 }
